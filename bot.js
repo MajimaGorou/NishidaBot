@@ -54,6 +54,9 @@ if(message.content.toLowerCase().includes( ['this is so'] ) && message.content.t
 
 }
   
+ 
+var iluvu = ["i love you", "i love u","i luv u"  ,"i love ya" , "i luv ya" , "i luv you"]; 
+ 
   
 if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     message.channel.send("Yes, " + person +"?");    

@@ -20,7 +20,13 @@ if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowe
    }
 
  
-  
+if(message.content.toLowerCase().includes( ['this is so'] ) && message.content.toLowerCase().includes( ['nishida play'] ) ){
+
+    if(message.content.toLowerCase().includes( ['24'] )){
+    message.channel.send("https://a.tumblr.com/tumblr_pbkv6cXucB1xv33e9o1.mp3","24 Hour Cinderella.mp3" )
+    } 
+
+}  
   
   
 

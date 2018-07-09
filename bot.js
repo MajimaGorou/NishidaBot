@@ -71,7 +71,7 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     search(saying, opts, function(err, results) {
         if(err) return console.log(err);
       message.channel.sendMessage(results[0].link);
-     message.react("✅");
+     message.react("👌");
       console.log(results); 
       });
         } else for (var i = 0; i < iluvu.length; i++) {

@@ -59,6 +59,17 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
 
 } 
   
+ 
+  
+  if(message.content.toLowerCase().includes( ['play this'])){
+    var saying= message.cleanContent.replace("play this", " ")
+    search(saying, opts, function(err, results) {
+        if(err) return console.log(err);
+      message.channel.sendMessage(results[0].link);
+      console.log(results); 
+      });
+      
+}
   
   
   

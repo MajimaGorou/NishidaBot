@@ -6,7 +6,7 @@ var search = require('youtube-search');
  
 var opts = {
   maxResults: 1,
-  key: 'AIzaSyDLMRvaB01tF6kgStk3eoGV9d0fFYSjdrg'
+  key: process.env.BOT_API
 };
  
 

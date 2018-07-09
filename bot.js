@@ -79,7 +79,7 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
       console.log(results); 
       });
         } else if(message.content.toLowerCase().includes( ['jail'] )){
-            if (person = "boss") {
+            if (message.member.roles.find("name", "Officer")) {
                 let userToModify = message.mentions.members.first();
             let roleToAdd = "449125335498358785";
             let roleToRemove ="449129637092524033";
@@ -93,7 +93,7 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
                  } )
             } else { message.channel.send("You're not the boss!") }
         } else if(message.content.toLowerCase().includes( ['free'] )){
-            if (person = "boss") {
+            if (message.member.roles.find("name", "Officer")) {
                 let userToModify = message.mentions.members.first();
             let roleToAdd = "449129637092524033";
             let roleToRemove ="449125335498358785";

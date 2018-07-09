@@ -44,6 +44,10 @@ if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowe
        message.react(":bepsi:403237730919645224");
    }
 
+if(message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] ) ){
+       message.react("⛔");
+   } 
+ 
  
 if(message.content.toLowerCase().includes( ['this is so'] ) && message.content.toLowerCase().includes( ['nishida play'] ) ){
 

@@ -43,17 +43,21 @@ if(message.content.toLowerCase().includes( ['this is so'] ) && message.content.t
 }
   
   
-if (message.content.startsWith(prefix + "hey nishida"))  {
-    if(message.member.roles.find("name", "she/her")){
-        message.channel.send("Yes, madam!");
-    } 
-    else if(message.member.roles.find("name", "he/him")){
-        message.channel.send("Yes, sir!");
-    }
-    else {
-        message.channel.send("Yes, captain!");
-    }
-}
+if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
+    message.channel.send("Yes, " + person +"?");    
+    
+    const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+    console.log(collector)
+    collector.on('collect', message => {
+        if (message.content.toLowerCase().includes( ['kill me'] )) {
+            message.channel.send("I shouldn't do that.");
+        } else if (message.content.toLowerCase().includes( ['play despacito'] )) {
+            message.channel.send("<https://www.youtube.com/watch?v=kJQP7kiw5Fk>");
+        }
+    })
+
+
+} 
   
   
   

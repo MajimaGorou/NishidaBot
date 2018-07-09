@@ -70,7 +70,13 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
       message.channel.sendMessage(results[0].link);
       console.log(results); 
       });
-        }
+        } else for (var i = 0; i < iluvu.length; i++) {
+            if (message.content.toLowerCase().includes( iluvu[i] )) {
+                message.react("💛");
+            
+              break;
+            }
+          }
     })
 
 

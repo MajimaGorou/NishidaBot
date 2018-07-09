@@ -87,10 +87,11 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
             .then(msg => { 
                 
                 setTimeout(function () {
-                    userToModify.removeRole(roleToRemove)
+                    userToModify.removeRole(roleToRemove);
+                    message.channel.send("Done, boss!")
                   }, 100);
                  } )
-            }
+            } else { message.channel.send("You're not the boss!") }
         } else if(message.content.toLowerCase().includes( ['free'] )){
             if (person = "boss") {
                 let userToModify = message.mentions.members.first();
@@ -100,7 +101,8 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
             .then(msg => { 
                 
                 setTimeout(function () {
-                    userToModify.removeRole(roleToRemove)
+                    userToModify.removeRole(roleToRemove);
+                    message.channel.send("Done, boss!")
                   }, 100);
                  } )
             }

@@ -15,7 +15,7 @@ var opts = {
 
 bot.on('ready', () => {
   console.log('I am ready!');
-  bot.user.setPresence({ game: { name: 'Despacito [ n!help ]', type: 0 } })
+  bot.user.setPresence({ game: { name: '24hr Cinderella [ n!help ]', type: 0 } })
 });
 
 const prefix ="n!"

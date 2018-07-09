@@ -15,7 +15,7 @@ var opts = {
 
 bot.on('ready', () => {
   console.log('I am ready!');
-  bot.user.setPresence({ game: { name: '24hr Cinderella [ n!help ]', type: 0 } })
+  bot.user.setPresence({ game: { name: '24h Cinderella [ n!help ]', type: 0 } })
 });
 
 const prefix ="n!"
@@ -62,6 +62,7 @@ if(message.content.toLowerCase().includes( ['this is so'] ) && message.content.t
 var iluvu = ["i love you", "i love u","i luv u"  ,"i love ya" , "i luv ya" , "i luv you"]; 
  
   
+
 if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     message.channel.send("Yes, " + person +"?");    
     
@@ -75,20 +76,48 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     search(saying, opts, function(err, results) {
         if(err) return console.log(err);
       message.channel.sendMessage(results[0].link);
-     message.react("👌");
       console.log(results); 
       });
-        } else for (var i = 0; i < iluvu.length; i++) {
+        } else if(message.content.toLowerCase().includes( ['jail'] )){
+            if (person = "boss") {
+                let userToModify = message.mentions.members.first();
+            let roleToAdd = "449125335498358785";
+            let roleToRemove ="449129637092524033";
+            userToModify.addRole(roleToAdd)
+            .then(msg => { 
+                
+                setTimeout(function () {
+                    userToModify.removeRole(roleToRemove)
+                  }, 100);
+                 } )
+            }
+        } else if(message.content.toLowerCase().includes( ['free'] )){
+            if (person = "boss") {
+                let userToModify = message.mentions.members.first();
+            let roleToAdd = "449129637092524033";
+            let roleToRemove ="449125335498358785";
+            userToModify.addRole(roleToAdd)
+            .then(msg => { 
+                
+                setTimeout(function () {
+                    userToModify.removeRole(roleToRemove)
+                  }, 100);
+                 } )
+            }
+        }
+        else for (var i = 0; i < iluvu.length; i++) {
             if (message.content.toLowerCase().includes( iluvu[i] )) {
                 message.react("💛");
             
               break;
             }
-          }
+          } 
+        
     })
 
 
 } 
+
   
  
   

@@ -58,7 +58,7 @@ if(message.content.toLowerCase().includes( ['this is so'] ) && message.content.t
 if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     message.channel.send("Yes, " + person +"?");    
     
-    const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+    const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 30000 });
     console.log(collector)
     collector.on('collect', message => {
         if (message.content.toLowerCase().includes( ['kill me'] )) {

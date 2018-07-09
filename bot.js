@@ -63,8 +63,13 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     collector.on('collect', message => {
         if (message.content.toLowerCase().includes( ['kill me'] )) {
             message.channel.send("I shouldn't do that.");
-        } else if (message.content.toLowerCase().includes( ['play despacito'] )) {
-            message.channel.send("<https://www.youtube.com/watch?v=kJQP7kiw5Fk>");
+        } else if (message.content.toLowerCase().startsWith( ['play'] )) {
+            var saying= message.cleanContent.replace("play", " ")
+    search(saying, opts, function(err, results) {
+        if(err) return console.log(err);
+      message.channel.sendMessage(results[0].link);
+      console.log(results); 
+      });
         }
     })
 
@@ -72,16 +77,6 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
 } 
   
  
-  
-  if(message.content.toLowerCase().includes( ['play this'])){
-    var saying= message.cleanContent.replace("play this", " ")
-    search(saying, opts, function(err, results) {
-        if(err) return console.log(err);
-      message.channel.sendMessage(results[0].link);
-      console.log(results); 
-      });
-      
-}
   
   
   

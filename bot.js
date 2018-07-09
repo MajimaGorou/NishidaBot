@@ -1,6 +1,18 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+
+var search = require('youtube-search');
+ 
+var opts = {
+  maxResults: 1,
+  key: 'AIzaSyDLMRvaB01tF6kgStk3eoGV9d0fFYSjdrg'
+};
+ 
+
+
+
+
 bot.on('ready', () => {
   console.log('I am ready!');
   bot.user.setPresence({ game: { name: 'Despacito [ n!help ]', type: 0 } })

@@ -29,6 +29,20 @@ if(message.content.toLowerCase().includes( ['this is so'] ) && message.content.t
 }  
   
   
+if (message.content.toLowerCase().includes( ['play24h'] ) ) {
+    var VC = message.member.voiceChannel;
+    if (!VC)
+        return message.reply("MESSAGE IF NOT IN A VOICE CHANNEL")
+VC.join()
+    .then(connection => {
+        const dispatcher = connection.playFile('https://a.tumblr.com/tumblr_pbkv6cXucB1xv33e9o1.mp3');
+        dispatcher.on("end", end => {VC.leave()});
+    })
+    .catch(console.error);
+};  
+  
+  
+  
 
 });
 

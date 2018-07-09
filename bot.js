@@ -29,6 +29,19 @@ if(message.content.toLowerCase().includes( ['this is so'] ) && message.content.t
 }  
   
   
+if (message.content.startsWith(prefix + "hey nishida"))  {
+    if(message.member.roles.find("name", "she/her")){
+        message.channel.send("Yes, madam!");
+    } 
+    else if(message.member.roles.find("name", "he/him")){
+        message.channel.send("Yes, sir!");
+    }
+    else {
+        message.channel.send("Yes, captain!");
+    }
+}
+  
+  
   
   
 

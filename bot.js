@@ -72,7 +72,7 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     collector.on('collect', message => {
         if (message.content.toLowerCase().includes( ['kill me'] )) {
             message.channel.send("I shouldn't do that.");
-        } else if (message.content.toLowerCase().startsWith( ['do'] ) || message.content.toLowerCase().startsWith( ['can'] ) || message.content.toLowerCase().startsWith( ['is'] ) || message.content.toLowerCase().startsWith( ['are'] ) && message.content.toLowerCase().endsWith( ['?'] )) {
+        } else if (message.content.toLowerCase().startsWith( ['do'] ) || message.content.toLowerCase().startsWith( ['would'] ) || message.content.toLowerCase().startsWith( ['will'] ) || message.content.toLowerCase().startsWith( ['can'] ) || message.content.toLowerCase().startsWith( ['is'] ) || message.content.toLowerCase().startsWith( ['are'] ) && message.content.toLowerCase().endsWith( ['?'] )) {
 
             if (message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] )) {
             

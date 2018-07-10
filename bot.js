@@ -60,7 +60,8 @@ if(message.content.toLowerCase().includes( ['this is so'] ) && message.content.t
   
  
 var iluvu = ["i love you", "i love u","i luv u"  ,"i love ya" , "i luv ya" , "i luv you"]; 
- 
+var doyou = ["Yes!", "Yes.","Maybe?"  ,"I don't know." , "I shouldn't answer that." , "I guess?" ,"No.","No!", "Yeah, sure!", "No way!" ,"Of course!","Boss doesn't want us talking about that.", "No!", "Why would you ask me this..."  ,"W-what!?"];
+var badquestions = ["Boss doesn't want us talking about that.", "No!", "Why would you ask me this..."  ,"W-what!?"]; 
   
 
 if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
@@ -71,6 +72,13 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     collector.on('collect', message => {
         if (message.content.toLowerCase().includes( ['kill me'] )) {
             message.channel.send("I shouldn't do that.");
+        } else if (message.content.toLowerCase().startsWith( ['do'] ) || message.content.toLowerCase().startsWith( ['is'] ) || message.content.toLowerCase().startsWith( ['are'] ) && message.content.toLowerCase().endsWith( ['?'] )) {
+
+            if (message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] )) {
+            
+                message.channel.send(badquestions[Math.floor(Math.random()*badquestions.length)]);
+            } else {
+            message.channel.send(doyou[Math.floor(Math.random()*doyou.length)]);}
         } else if (message.content.toLowerCase().startsWith( ['play'] )) {
             var saying= message.cleanContent.replace("play", " ")
     search(saying, opts, function(err, results) {

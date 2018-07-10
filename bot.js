@@ -84,6 +84,7 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     search(saying, opts, function(err, results) {
         if(err) return console.log(err);
       message.channel.sendMessage(results[0].link);
+      message.react("👌");
       console.log(results); 
       });
         } else if(message.content.toLowerCase().includes( ['jail'] )){

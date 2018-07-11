@@ -46,7 +46,13 @@ bot.on('message', message => {
         var person="captain";
         }
   
-  
+if(message.content.toLowerCase().includes( ['welcome'] )){
+            if (message.member.roles.find("name", "Officer")) {
+                let userToModify = message.mentions.members.first();
+            let roleToRemove ="449129600543621122";
+            userToModify.removeRole(roleToRemove);
+            } 
+        }  
 
 if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowerCase().includes( ['pepsi'] ) ){
        message.react(":bepsi:403237730919645224");
@@ -115,13 +121,7 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
                   }, 100);
                  } )
             } else { message.channel.send("You're not the boss!") }
-        } else if(message.content.toLowerCase().includes( ['welcome'] )){
-            if (message.member.roles.find("name", "Officer")) {
-                let userToModify = message.mentions.members.first();
-            let roleToRemove ="449129600543621122";
-            userToModify.removeRole(roleToRemove);
-            } 
-        } else if(message.content.toLowerCase().includes( ['free'] )){
+        }  else if(message.content.toLowerCase().includes( ['free'] )){
             if (message.member.roles.find("name", "Officer")) {
                 let userToModify = message.mentions.members.first();
             let roleToAdd = "449129637092524033";

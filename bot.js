@@ -50,7 +50,7 @@ if(message.content.toLowerCase().startsWith( [prefix + 'say'] )){
    } 
  
 
-if(message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] ) ){
+if(message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] ) || message.content.toLowerCase().includes( ['pipi'] ) ){
        message.react("⛔");
    } 
  
@@ -80,7 +80,7 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
             message.channel.send("I shouldn't do that.");
         } else if (message.content.toLowerCase().endsWith( ['?'] )) {
 
-            if (message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] )) {
+            if (message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] ) || message.content.toLowerCase().includes( ['pipi'] ) ) {
             
                 message.channel.send(badquestions[Math.floor(Math.random()*badquestions.length)]);
             } else {

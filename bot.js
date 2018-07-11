@@ -44,7 +44,7 @@ if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowe
        message.react(":bepsi:403237730919645224");
    }
  
-if(message.content.toLowerCase().startsWith( [prefix + 'say'] ) || message.content.toLowerCase().includes( ['pepsi'] ) ){
+if(message.content.toLowerCase().startsWith( [prefix + 'say'] )){
        var newm=message.content.replace("n!say", "")
        message.channel.send(newm);
    } 

@@ -118,15 +118,8 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
         } else if(message.content.toLowerCase().includes( ['welcome'] )){
             if (message.member.roles.find("name", "Officer")) {
                 let userToModify = message.mentions.members.first();
-            let roleToAdd = "449129637092524033";
             let roleToRemove ="449129600543621122";
-            userToModify.addRole(roleToAdd)
-            .then(msg => { 
-                
-                setTimeout(function () {
-                    userToModify.removeRole(roleToRemove);
-                  }, 100);
-                 } )
+            userToModify.removeRole(roleToRemove);
             } 
         } else if(message.content.toLowerCase().includes( ['free'] )){
             if (message.member.roles.find("name", "Officer")) {

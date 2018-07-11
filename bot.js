@@ -43,6 +43,12 @@ bot.on('message', message => {
 if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowerCase().includes( ['pepsi'] ) ){
        message.react(":bepsi:403237730919645224");
    }
+ 
+if(message.content.toLowerCase().startsWith( [prefix + 'say'] ) || message.content.toLowerCase().includes( ['pepsi'] ) ){
+       var newm=message.content.replace("n!say", "")
+       message.channel.send(newm);
+   } 
+ 
 
 if(message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] ) ){
        message.react("⛔");

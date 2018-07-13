@@ -59,9 +59,31 @@ if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowe
    }
  
 if(message.content.toLowerCase().startsWith( [prefix + 'say'] )){
-       var newm=message.content.replace("n!say", "")
-       message.channel.send(newm);
+       if (message.member.roles.find("name", "Officer")) { 
+         var newm=message.content.replace("n!say", "")
+         message.channel.send(newm);
+       }
    } 
+ 
+ 
+ 
+ 
+ 
+if (message.content.toLowerCase().startsWith(prefix + "stab")) {
+  if (message.cleanContent.includes("@")) {
+        var odene= message.mentions.members.first()
+        message.channel.sendMessage( ":knife:  |  **" + message.author.username + "** has stabbed **" + odene + "**!");  
+
+    } else if (message.cleanContent.includes("n!stab ")) { 
+        var odene= message.cleanContent.replace("n!stab ", "")
+        message.channel.sendMessage( ":knife:  |  **" + message.author.username + "** has stabbed **" + odene + "**!");  
+
+    } else message.channel.sendMessage( ":knife:  |  **" + message.author.username + "** stabbed themselves! I'll go get the first aid kit..");
+}
+ 
+ 
+ 
+ 
  
 
 if(message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] ) || message.content.toLowerCase().includes( ['pipi'] ) ){

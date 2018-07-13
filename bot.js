@@ -82,7 +82,7 @@ if (message.content.toLowerCase().startsWith(prefix + "stab")) {
         var odene= message.cleanContent.replace("n!stab ", "")
         message.channel.sendMessage( ":knife:  |  **" + message.author.username + "** has stabbed **" + odene + "**!");  
 
-    } else message.channel.sendMessage( ":knife:  |  **" + message.author.username + "** stabbed " + pronoun + " ! I'll go get the first aid kit..");
+    } else message.channel.sendMessage( ":knife:  |  **" + message.author.username + "** stabbed " + pronoun + "! I'll go get the first aid kit..");
 }
  
  

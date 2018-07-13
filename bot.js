@@ -35,15 +35,19 @@ bot.on('message', message => {
 
         if(message.member.roles.find("name", "Officer")){
         var person="boss";
+        var pronoun="himself";
         }     
         else if(message.member.roles.find("name", "she/her")){
         var person="madam";
+        var pronoun="herself";
         } 
         else if(message.member.roles.find("name", "he/him")){
         var person="sir";
+        var pronoun="himself";
         }
         else {
         var person="captain";
+        var pronoun="themselves";
         }
   
 if(message.content.toLowerCase().includes( ['welcome'] )){
@@ -78,7 +82,7 @@ if (message.content.toLowerCase().startsWith(prefix + "stab")) {
         var odene= message.cleanContent.replace("n!stab ", "")
         message.channel.sendMessage( ":knife:  |  **" + message.author.username + "** has stabbed **" + odene + "**!");  
 
-    } else message.channel.sendMessage( ":knife:  |  **" + message.author.username + "** stabbed themselves! I'll go get the first aid kit..");
+    } else message.channel.sendMessage( ":knife:  |  **" + message.author.username + "** stabbed " + pronoun + " ! I'll go get the first aid kit..");
 }
  
  

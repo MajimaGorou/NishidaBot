@@ -51,7 +51,7 @@ bot.on('message', message => {
         }
   
 if(message.content.toLowerCase().includes( ['welcome'] )){
-            if (message.member.roles.find("name", "Officer")) {
+            if (message.member.roles.find("name", "Mods")) {
                 let userToModify = message.mentions.members.first();
             let roleToRemove ="449129600543621122";
             userToModify.removeRole(roleToRemove);

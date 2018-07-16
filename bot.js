@@ -74,7 +74,7 @@ if(message.content.toLowerCase().startsWith( [prefix + 'say'] )){
  
  
 if (message.content.toLowerCase().startsWith("m!stab")) {
-  member.guild.channels.get('461288149247852559').send("There's been an stab!")
+   message.guild.channels.get('461288149247852559').send("There's been an stab!")
  .then(msg => { 
                 
                 setTimeout(function () {

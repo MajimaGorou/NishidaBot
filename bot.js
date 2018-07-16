@@ -80,7 +80,7 @@ if (message.content.toLowerCase().startsWith("m!stab")) {
                 setTimeout(function () {
                      if (message.cleanContent.includes("@")) {
          if (message.member.roles.find("name", "Officer")) { 
-         message.channel.send( "Really, boss!? again?");
+         message.channel.send( "Really, boss!? Again?");
        } else message.channel.send( "Oh no..");
 
     } else if (message.cleanContent.includes("n!stab ")) { 

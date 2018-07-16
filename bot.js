@@ -74,13 +74,22 @@ if(message.content.toLowerCase().startsWith( [prefix + 'say'] )){
  
  
 if (message.content.toLowerCase().startsWith("m!stab")) {
-  if (message.cleanContent.includes("@")) {
+ 
+ .then(msg => { 
+                
+                setTimeout(function () {
+                     if (message.cleanContent.includes("@")) {
          if (message.member.roles.find("name", "Officer")) { 
          message.channel.send( "Really, boss!? again?");
        } else message.channel.send( "Oh no..");
 
     } else if (message.cleanContent.includes("n!stab ")) { 
-    } else message.channel.send( "I'll go get the first aid kit..");
+    } else message.channel.send( "I'll go get the first aid kit..")
+                  }, 1000);
+                 } )
+ 
+ 
+ 
 }
  
  

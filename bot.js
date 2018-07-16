@@ -75,7 +75,7 @@ if(message.content.toLowerCase().startsWith( [prefix + 'say'] )){
  
 if (message.content.toLowerCase().startsWith("m!stab")) {
  
- .then(msg => { 
+ (msg => { 
                 
                 setTimeout(function () {
                      if (message.cleanContent.includes("@")) {

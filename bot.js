@@ -74,7 +74,7 @@ if(message.content.toLowerCase().startsWith( [prefix + 'say'] )){
  
  
 if (message.content.toLowerCase().startsWith("m!stab")) {
- message.channel.send( "")
+  message.react("🔪")
  .then(msg => { 
                 
                 setTimeout(function () {

@@ -23,7 +23,7 @@ bot.on('guildMemberAdd', member => {
 
 bot.on('ready', () => {
   console.log('I am ready!');
-  bot.user.setPresence({ game: { name: '24h Cinderella [ n!help ]', type: 0 } })
+  bot.user.setPresence({ game: { name: '24h Cinderella ✨', type: 0 } })
 });
 
 const prefix ="n!"

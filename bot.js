@@ -67,8 +67,9 @@ if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowe
    }
  
   if(message.content.toLowerCase().includes( ['goromi'] ) ){
+       message.react(":goromi:454923613594714123");
        message.react("a:love:484448929996472330");
-   message.react(":goromi:454923613594714123");
+   
    }
  
   if(message.content.toLowerCase().includes( ['tonight'] ) ){

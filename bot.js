@@ -62,6 +62,20 @@ if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowe
        message.react(":bepsi:403237730919645224");
    }
  
+ if(message.content.toLowerCase().includes( ['kiryu'] ) ){
+       message.react(":majimaCANTSEEME:472575052093587457");
+   }
+ 
+  if(message.content.toLowerCase().includes( ['goromi'] ) ){
+       message.react("a:love:484448929996472330");
+   message.react(":goromi:454923613594714123");
+   }
+ 
+  if(message.content.toLowerCase().includes( ['tonight'] ) ){
+       message.react(":nishikiCRY:460895211481071616");
+   }
+ 
+ 
 if(message.content.toLowerCase().startsWith( [prefix + 'say'] )){
        if (message.member.roles.find("name", "Officer")) { 
          var newm=message.content.replace("n!say", "")

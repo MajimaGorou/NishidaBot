@@ -62,7 +62,7 @@ if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowe
        message.react(":bepsi:403237730919645224");
    }
  
- if(message.content.toLowerCase().includes( ['kiryu'] ) ){
+ if(message.content.toLowerCase().includes( ['kiryu'] ) || message.content.toLowerCase().includes( ['kazzy'] )  ){
        message.react(":majimaCANTSEEME:472575052093587457");
    }
  

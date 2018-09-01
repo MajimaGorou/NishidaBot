@@ -76,6 +76,10 @@ if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowe
        message.react(":nishikiCRY:460895211481071616");
    }
  
+ if(message.content.toLowerCase().includes( ['shimano'] ) ){
+       message.react("🥚");
+   }
+ 
  
 if(message.content.toLowerCase().startsWith( [prefix + 'say'] )){
        if (message.member.roles.find("name", "Officer")) { 

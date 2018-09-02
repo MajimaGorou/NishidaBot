@@ -100,7 +100,7 @@ if (message.content.toLowerCase().startsWith("m!stab")) {
                      if (message.cleanContent.includes("@")) {
          if (message.member.roles.find("name", "Officer")) { 
          message.channel.send( "Really, boss!? Again?");
-       } else message.channel.send( "Oh no..");
+       } else message.channel.send( "Oh no...");
 
     } else if (message.cleanContent.includes("n!stab ")) { 
     } else message.channel.send( "I'll go get the first aid kit..")

@@ -135,7 +135,11 @@ if(message.content.toLowerCase().startsWith("hey nishida call kiryu")){
               }
               else if (message.content.toLowerCase().includes( ['i love u'] )) {
                 message.channel.send("<:call:485968129831469071> **Kiryu:**```Oh... ❤```");
-            }
+              }
+              else if (message.content.toLowerCase().includes( ['selfie'] )) {
+                message.channel.send("Oh! I got a picture from Kiryu-san! ");
+                message.channel.send("<:picture:485974824456552462>  **Kiryu sent a picture**" , {files: ["https://cdn.discordapp.com/attachments/456120752077537293/485976104780431370/steak.png"]});
+              }
             
                      
             } )

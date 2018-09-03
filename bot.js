@@ -117,24 +117,24 @@ if (message.content.toLowerCase().startsWith("m!stab")) {
 
 if(message.content.toLowerCase().startsWith("hey nishida call kiryu")){
        
-    message.channel.sendMessage("Right away, "+ person)
-    message.channel.sendMessage(":telephone_receiver: Calling Kiryu-san <a:typing:485968614516850688> ")
+    message.channel.sendMessage("Right away, "+ person + "!")
+    message.channel.sendMessage(":telephone_receiver: **Calling Kiryu-san** <a:typing:485968614516850688> ")
    
     .then(msg => { 
         
         setTimeout(function () {
-            msg.edit("<:callaccepted:485966797300826145> Call Accepted!")
-            message.channel.sendMessage("<:call:485968129831469071> Kiryu:```Hello?```")
+            msg.edit("<:callaccepted:485966797300826145> **Call Accepted!**")
+            message.channel.sendMessage("<:call:485968129831469071> **Kiryu:**```Hello?```")
           }, 1000);
 
           const collector2 = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 30000 });
           console.log(collector2)
           collector2.on('collect', message => {
               if (message.content.toLowerCase().includes( ['kill me'] )) {
-                  message.channel.send("<:call:485968129831469071> Kiryu:```...Who is that?```");
+                  message.channel.send("<:call:485968129831469071> **Kiryu:**```...Who is that?```");
               }
               else if (message.content.toLowerCase().includes( ['i love u'] )) {
-                message.channel.send("<:call:485968129831469071> Kiryu:```Oh... ❤```");
+                message.channel.send("<:call:485968129831469071> **Kiryu:**```Oh... ❤```");
             }
             
                      

@@ -174,6 +174,8 @@ if(message.content.toLowerCase().includes( ['this is so'] ) && message.content.t
 var iluvu = ["i love you", "i love u","i luv u"  ,"i love ya" , "i luv ya" , "i luv you"]; 
 var doyou = ["Yes!", "Yes.","Maybe?"  ,"I don't know." , "I shouldn't answer that." , "I guess?" ,"No.","No!", "Yeah, sure!", "No way!" ,"Of course!","Boss doesn't want us talking about that.", "No!", "Why would you ask me this..."  ,"W-what!?"];
 var badquestions = ["Boss doesn't want us talking about that.", "No!", "Why would you ask me this..."  ,"W-what!?"]; 
+ 
+ 
   
 
 if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
@@ -187,8 +189,8 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     console.log(collector)
     collector.on('collect', message => {
         if (message.content.toLowerCase().includes( ['kill me'] )) {
-            message.channel.send("I shouldn't do that.");
-        } else if (message.content.toLowerCase().endsWith( ['?'] )) {
+            message.channel.send("Goodbye, " + person + "." , {files: ["https://cdn.discordapp.com/attachments/449121009669505024/487053656475303947/sai2_2018-09-05_19-16-06.png"]});
+        }  else if (message.content.toLowerCase().endsWith( ['?'] )) {
 
             if (message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] ) || message.content.toLowerCase().includes( ['pipi'] ) ) {
             

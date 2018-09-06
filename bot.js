@@ -193,7 +193,7 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
         }  else if (message.content.toLowerCase().endsWith( ['?'] )) {
 
             if (message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] ) || message.content.toLowerCase().includes( ['pipi'] ) ) {
-            
+                message.author.send("Enough piss talk.", {files: ["https://cdn.discordapp.com/attachments/449121009669505024/487053656475303947/sai2_2018-09-05_19-16-06.png"]});
                 message.channel.send(badquestions[Math.floor(Math.random()*badquestions.length)]);
             } else {
             message.channel.send(doyou[Math.floor(Math.random()*doyou.length)]);}

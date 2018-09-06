@@ -81,6 +81,7 @@ if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowe
  
  if(message.content.toLowerCase().includes( ['shimano'] ) ){
        message.react("🥚");
+       message.react("🔫");
    }
  
  

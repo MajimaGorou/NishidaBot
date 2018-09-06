@@ -76,6 +76,7 @@ if(message.content.toLowerCase().includes( ['bepsi'] ) || message.content.toLowe
  
   if(message.content.toLowerCase().includes( ['tonight'] ) ){
        message.react(":nishikiCRY:460895211481071616");
+       message.react(":kiryuCRY:487059468631146501");
    }
  
  if(message.content.toLowerCase().includes( ['shimano'] ) ){
@@ -105,7 +106,7 @@ if (message.content.toLowerCase().startsWith("m!stab")) {
        } else message.channel.send( "Oh no...");
 
     } else if (message.cleanContent.includes("n!stab ")) { 
-    } else message.channel.send( "I'll go get the first aid kit..")
+    } else message.channel.send( "I'll go get the first aid kit...")
                   }, 1000);
                  } )
  

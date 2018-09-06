@@ -189,7 +189,7 @@ if(message.content.toLowerCase().startsWith( ['hey nishida'] )){
     console.log(collector)
     collector.on('collect', message => {
         if (message.content.toLowerCase().includes( ['kill me'] )) {
-            message.channel.send("Goodbye, " + person + "." , {files: ["https://cdn.discordapp.com/attachments/449121009669505024/487053656475303947/sai2_2018-09-05_19-16-06.png"]});
+            message.channel.send("I shouldn't do that.");
         }  else if (message.content.toLowerCase().endsWith( ['?'] )) {
 
             if (message.content.toLowerCase().includes( ['pee'] ) || message.content.toLowerCase().includes( ['piss'] ) || message.content.toLowerCase().includes( ['pipi'] ) ) {

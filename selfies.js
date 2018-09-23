@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 
-exports.selfies = ["https://i.imgur.com/ZkBshzM.png",
+exports.selfieos = ["https://i.imgur.com/ZkBshzM.png",
 "https://i.imgur.com/PY7J4Og.png",
 "https://i.imgur.com/dgturFw.png",
 "https://i.imgur.com/LnUpPpb.png",

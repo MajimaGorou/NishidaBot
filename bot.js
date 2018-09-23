@@ -139,8 +139,21 @@ if(message.content.toLowerCase().startsWith("hey nishida call kiryu")){
                 message.channel.send("<:call:485968129831469071> **Kiryu:**```Oh... ❤```");
               }
               else if (message.content.toLowerCase().includes( ['selfie'] )) {
+               
+               
+               var { selfieos } = require('./selfies');
+				var numberofselfies = selfieos.length - 1;
+var countinselfies = Math.round(Math.random() * (numberofselfies - 1) + 1)
+
+
+const RANDOMSELFIE = new Discord.RichEmbed()
+  .setColor(0x36393E)
+.setDescription("<:picture:485974824456552462>  **Kiryu sent a picture:**"")
+  .setImage(selfieos[countinselfies]);
+
+				
                 message.channel.send("Oh! I got a picture from Kiryu-san! ");
-                message.channel.send("<:picture:485974824456552462>  **Kiryu sent a picture:**" , {files: ["https://cdn.discordapp.com/attachments/456120752077537293/485976104780431370/steak.png"]});
+                message.channel.sendEmbed(RANDOMSELFIE);
               }
             
                      

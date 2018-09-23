@@ -148,7 +148,7 @@ var countinselfies = Math.round(Math.random() * (numberofselfies - 1) + 1)
 
 const RANDOMSELFIE = new Discord.RichEmbed()
   .setColor(0x36393E)
-.setDescription("<:picture:485974824456552462>  **Kiryu sent a picture:**"")
+.setDescription("<:picture:485974824456552462>  **Kiryu sent a picture:**")
   .setImage(selfieos[countinselfies]);
 
 				

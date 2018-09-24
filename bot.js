@@ -126,17 +126,57 @@ if(message.content.toLowerCase().startsWith("hey nishida call kiryu")){
         
         setTimeout(function () {
             msg.edit("<:callaccepted:485966797300826145> **Call Accepted!**")
-            message.channel.sendMessage("<:call:485968129831469071> **Kiryu:**```Hello?```")
-          }, 1000);
+            message.channel.send({embed: {
+
+
+                author: {
+                    name: "Kiryu",
+                    icon_url: "https://cdn.discordapp.com/attachments/473329961579708437/493572212503347211/phone-flat.png"
+                  },
+                    color: 0x36393E,
+                    thumbnail: {
+                        url: "https://cdn.discordapp.com/attachments/473329961579708437/493565204462829570/kiryuicon.png",
+                     },
+                    description: "╭━━━━━━━━━━━━━━━╮\n<:transparent:462456796498624512>Moshi moshi?\n╰━━━━━━━━━━━━━━━╯"
+                     
+                  }}
+            );
+          }, 2000);
 
           const collector2 = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 30000 });
           console.log(collector2)
           collector2.on('collect', message => {
               if (message.content.toLowerCase().includes( ['kill me'] )) {
-                  message.channel.send("<:call:485968129831469071> **Kiryu:**```...Who is that?```");
+                  message.channel.send({embed: {
+
+
+                    author: {
+                        name: "Kiryu",
+                        icon_url: "https://cdn.discordapp.com/attachments/473329961579708437/493572212503347211/phone-flat.png"
+                      },
+                        color: 0x36393E,
+                        thumbnail: {
+                            url: "https://cdn.discordapp.com/attachments/473329961579708437/493565204462829570/kiryuicon.png",
+                         },
+                        description: "╭━━━━━━━━━━━━━━━╮\n<:transparent:462456796498624512>No!\n╰━━━━━━━━━━━━━━━╯"
+                         
+                      }});
               }
-              else if (message.content.toLowerCase().includes( ['i love u'] )) {
-                message.channel.send("<:call:485968129831469071> **Kiryu:**```Oh... ❤```");
+              else if (message.content.toLowerCase().includes( ['love'] )) {
+                message.channel.send({embed: {
+
+
+                    author: {
+                        name: "Kiryu",
+                        icon_url: "https://cdn.discordapp.com/attachments/473329961579708437/493572212503347211/phone-flat.png"
+                      },
+                        color: 0x36393E,
+                        thumbnail: {
+                            url: "https://cdn.discordapp.com/attachments/473329961579708437/493565204462829570/kiryuicon.png",
+                         },
+                        description: "╭━━━━━━━━━━━━━━━╮\n<:transparent:462456796498624512>O-oh...\n╰━━━━━━━━━━━━━━━╯"
+                         
+                      }});
               }
               else if (message.content.toLowerCase().includes( ['selfie'] )) {
                
@@ -150,6 +190,7 @@ const RANDOMSELFIE = new Discord.RichEmbed()
   .setColor(0x36393E)
   .setAuthor("Kiryu sent a picture","https://cdn.discordapp.com/attachments/473329961579708437/493547138622423068/cameraicon.png")
   .setImage(selfieos[countinselfies]);
+  
 
 				
                 message.channel.send("Oh! I got a picture from Kiryu-san! ");

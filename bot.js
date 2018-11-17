@@ -92,7 +92,28 @@ if(message.content.toLowerCase().startsWith( [prefix + 'say'] )){
        }
    } 
  
- 
+
+	
+	
+if (message.content.toLowerCase().startsWith("n!announce ")) {
+        if (message.member.roles.find("name", "Officer")) { 
+        var newme=message.content.replace("n!announce ", "")
+        const args = newme.split(' ');
+        const mensajeto = args.slice(1).join(' ');
+        message.guild.channels.get(args[0]).send( "@everyone")
+		
+        .then(msg => { 
+        
+            setTimeout(function () {
+                message.guild.channels.get(args[0]).send(mensajeto);
+        
+              }, 1000);
+             } )
+            
+        }
+    }	
+	
+	
  
  
  

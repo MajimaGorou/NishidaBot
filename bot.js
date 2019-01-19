@@ -16,7 +16,7 @@ bot.on('guildMemberAdd', member => {
     member.user + " has joined the **Majima Family**! ",
      "Eveybody, we have a new member! Welcome, " + member.user + ", to the **Majima Family**!"];
 
-    member.guild.channels.get('450914187472797697').send(  intromessage[Math.floor(Math.random()*intromessage.length)] + " Please read the rules in the <#449099915860246531> channel and **introduce yourself here** to get complete access to the server!"); 
+    member.guild.channels.get('450914187472797697').send(  intromessage[Math.floor(Math.random()*intromessage.length)] + " Please read the rules in the <#533128154311688192> channel and **introduce yourself here** to get complete access to the server!"); 
 });
 
 
